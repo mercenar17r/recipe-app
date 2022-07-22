@@ -1,0 +1,24 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe Application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mercenar17r/recipe-app.git"
+  },
+  "author": "Cosmin Negrut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mercenar17r/recipe-app/issues"
+  },
+  "homepage": "https://github.com/mercenar17r/recipe-app#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.1",
+    "parcel": "^2.3.1",
+    "sass": "^1.49.7"
+  }
+}

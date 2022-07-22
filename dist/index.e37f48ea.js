@@ -532,8 +532,7 @@ const timeout = function(s) {
 const showRecipe = async function() {
     try {
         //1.Loading the recipe
-        const res = await fetch(// 'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886'
-        'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bcfcc');
+        const res = await fetch('https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886');
         const data = await res.json();
         if (!res.ok) throw new Error(`${data.message} (${res.status})`);
         let { recipe  } = data.data;
@@ -552,8 +551,8 @@ const showRecipe = async function() {
         const markup = `
         <figure class="recipe__fig">
         <img src="${recipe.image}" alt="${recipe.title}" class="recipe__img" />
-        <h1 class="${recipe.title}">
-          <span>Pasta with tomato cream sauce</span>
+        <h1 class="recipe__title">
+          <span>${recipe.title}</span>
         </h1>
       </figure>
 
@@ -601,29 +600,21 @@ const showRecipe = async function() {
       <div class="recipe__ingredients">
         <h2 class="heading--2">Recipe ingredients</h2>
         <ul class="recipe__ingredient-list">
-          <li class="recipe__ingredient">
-            <svg class="recipe__icon">
-              <use href="src/img/icons.svg#icon-check"></use>
-            </svg>
-            <div class="recipe__quantity">1000</div>
-            <div class="recipe__description">
-              <span class="recipe__unit">g</span>
-              pasta
-            </div>
-          </li>
-
-          <li class="recipe__ingredient">
-            <svg class="recipe__icon">
-              <use href="src/img/icons.svg#icon-check"></use>
-            </svg>
-            <div class="recipe__quantity">0.5</div>
-            <div class="recipe__description">
-              <span class="recipe__unit">cup</span>
-              ricotta cheese
-            </div>
-          </li>
-        </ul>
-      </div>
+        ${recipe.ingredients.map((ing)=>{
+            return `
+              <li class="recipe__ingredient">
+              <svg class="recipe__icon">
+                <use href="src/img/icons.svg#icon-check"></use>
+              </svg>
+              <div class="recipe__quantity">${ing.quantity}</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">${ing.unit}</span>
+                ${ing.description}
+              </div>
+            </li>
+         `;
+        }).join('')}
+    </div>
 
       <div class="recipe__directions">
         <h2 class="heading--2">How to cook it</h2>
@@ -644,6 +635,7 @@ const showRecipe = async function() {
         </a>
       </div>
     `;
+        recipeContainer.innerHTML = '';
         recipeContainer.insertAdjacentHTML('afterbegin', markup);
     } catch (err) {
         alert(err);

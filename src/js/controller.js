@@ -154,7 +154,6 @@ const showRecipe = async function () {
     alert(err);
   }
 };
-
-window.addEventListener('hashchange', showRecipe);
-console.log(';fwff');
-console.log('wfwfw111');
+['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
+// window.addEventListener('hashchange', showRecipe);
+// window.addEventListener('load', showRecipe);

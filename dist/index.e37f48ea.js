@@ -525,8 +525,6 @@ var _webImmediateJs = require("core-js/modules/web.immediate.js"); // window.add
 var _modelJs = require("./model.js");
 var _recipeViewJs = require("./views/recipeView.js");
 var _recipeViewJsDefault = parcelHelpers.interopDefault(_recipeViewJs);
-var _iconsSvg = require("url:../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 var _runtime = require("regenerator-runtime/runtime");
 const recipeContainer = document.querySelector('.recipe');
 const timeout = function(s) {
@@ -543,7 +541,7 @@ const controlRecipes = async function() {
         const id = window.location.hash.slice(1);
         console.log(id);
         if (!id) return;
-        renderSpinner(recipeContainer);
+        _recipeViewJsDefault.default.renderSpinner();
         //1.Loading the recipe
         await _modelJs.loadRecipe(id);
         //2.Rendering the recipe
@@ -558,7 +556,7 @@ const controlRecipes = async function() {
 ].forEach((ev)=>window.addEventListener(ev, controlRecipes)
 );
 
-},{"core-js/modules/web.immediate.js":"49tUX","url:../img/icons.svg":"loVOp","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./model.js":"Y4A21","./views/recipeView.js":"l60JC"}],"49tUX":[function(require,module,exports) {
+},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./model.js":"Y4A21","./views/recipeView.js":"l60JC"}],"49tUX":[function(require,module,exports) {
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require('../modules/web.clear-immediate');
 require('../modules/web.set-immediate');
@@ -1679,45 +1677,7 @@ $({
     setImmediate: setImmediate
 });
 
-},{"../internals/export":"dIGt4","../internals/global":"i8HOC","../internals/task":"7jDg7"}],"loVOp":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('hWUTQ') + "icons.dfd7a6db.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {
-};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"dXNgZ":[function(require,module,exports) {
+},{"../internals/export":"dIGt4","../internals/global":"i8HOC","../internals/task":"7jDg7"}],"dXNgZ":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -2363,13 +2323,15 @@ const loadRecipe = async function(id) {
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l60JC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _iconsSvg = require("url:../../img/icons.svg");
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class RecipeView {
     #parentElement = document.querySelector('.recipe');
     #data;
     render(data) {
         this.#data = data;
-        const markup = this.#generateMarkup;
-        this.#clear;
+        const markup = this.#generateMarkup();
+        this.#clear();
         this.#parentElement.insertAdjacentHTML('afterbegin', markup);
     }
      #clear() {
@@ -2379,14 +2341,14 @@ class RecipeView {
         const markup = `
       <div class="spinner">
         <svg>
-            <use href="${icons}#icon-loader"></use>
+            <use href="${_iconsSvgDefault.default}#icon-loader"></use>
         </svg>
       </div>
     `;
         this.#parentElement.innerHTML = '';
         this.#parentElement.insertAdjacentHTML('afterbegin', markup);
     };
-     #generateMarkup(data) {
+     #generateMarkup() {
         return `
     <figure class="recipe__fig">
     <img src="${this.#data.image}" alt="${this.#data.title}" class="recipe__img" />
@@ -2398,14 +2360,14 @@ class RecipeView {
   <div class="recipe__details">
     <div class="recipe__info">
       <svg class="recipe__info-icon">
-        <use href="${icons}#icon-clock"></use>
+        <use href="${_iconsSvgDefault.default}#icon-clock"></use>
       </svg>
       <span class="recipe__info-data recipe__info-data--minutes">${this.#data.cookingTime}</span>
       <span class="recipe__info-text">minutes</span>
     </div>
     <div class="recipe__info">
       <svg class="recipe__info-icon">
-        <use href="${icons}#icon-users"></use>
+        <use href="${_iconsSvgDefault.default}#icon-users"></use>
       </svg>
       <span class="recipe__info-data recipe__info-data--people">${this.#data.servings}</span>
       <span class="recipe__info-text">servings</span>
@@ -2413,12 +2375,12 @@ class RecipeView {
       <div class="recipe__info-buttons">
         <button class="btn--tiny btn--increase-servings">
           <svg>
-            <use href="${icons}#icon-minus-circle"></use>
+            <use href="${_iconsSvgDefault.default}#icon-minus-circle"></use>
           </svg>
         </button>
         <button class="btn--tiny btn--increase-servings">
           <svg>
-            <use href="${icons}#icon-plus-circle"></use>
+            <use href="${_iconsSvgDefault.default}#icon-plus-circle"></use>
           </svg>
         </button>
       </div>
@@ -2426,12 +2388,12 @@ class RecipeView {
 
     <div class="recipe__user-generated">
       <svg>
-        <use href="${icons}#icon-user"></use>
+        <use href="${_iconsSvgDefault.default}#icon-user"></use>
       </svg>
     </div>
     <button class="btn--round">
       <svg class="">
-        <use href="${icons}#icon-bookmark-fill"></use>
+        <use href="${_iconsSvgDefault.default}#icon-bookmark-fill"></use>
       </svg>
     </button>
   </div>
@@ -2443,7 +2405,7 @@ class RecipeView {
             return `
           <li class="recipe__ingredient">
           <svg class="recipe__icon">
-            <use href="${icons}#icon-check"></use>
+            <use href="${_iconsSvgDefault.default}#icon-check"></use>
           </svg>
           <div class="recipe__quantity">${ing.quantity}</div>
           <div class="recipe__description">
@@ -2469,7 +2431,7 @@ class RecipeView {
     >
       <span>Directions</span>
       <svg class="search__icon">
-        <use href="${icons}#icon-arrow-right"></use>
+        <use href="${_iconsSvgDefault.default}#icon-arrow-right"></use>
       </svg>
     </a>
   </div>
@@ -2478,6 +2440,44 @@ class RecipeView {
 }
 exports.default = new RecipeView();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["ddCAb","aenu9"], "aenu9", "parcelRequire3a11")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","url:../../img/icons.svg":"loVOp"}],"loVOp":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('hWUTQ') + "icons.dfd7a6db.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}]},["ddCAb","aenu9"], "aenu9", "parcelRequire3a11")
 
 //# sourceMappingURL=index.e37f48ea.js.map

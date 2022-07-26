@@ -2329,7 +2329,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getJSON", ()=>getJSON
 );
 var _regeneratorRuntime = require("regenerator-runtime");
-var _helpers = require("./helpers");
+var _config = require("./config");
 const timeout = function(s) {
     return new Promise(function(_, reject) {
         setTimeout(function() {
@@ -2342,7 +2342,7 @@ const getJSON = async function(url) {
         const fetchPro = fetch(url);
         const res = await Promise.race([
             fetchPro,
-            timeout(_helpers.TIMEOUT_SEC)
+            timeout(_config.TIMEOUT_SEC)
         ]);
         const data = await res.json();
         if (!res.ok) throw new Error(`${data.message} (${res.status})`);
@@ -2352,7 +2352,7 @@ const getJSON = async function(url) {
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","regenerator-runtime":"dXNgZ","./helpers":"hGI1E"}],"l60JC":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","regenerator-runtime":"dXNgZ","./config":"k5Hzs"}],"l60JC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("url:../../img/icons.svg");

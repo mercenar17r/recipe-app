@@ -2291,6 +2291,10 @@ var _config = require("./config");
 var _helpers = require("./helpers");
 const state = {
     recipe: {
+    },
+    search: {
+        query: '',
+        results: []
     }
 };
 const loadRecipe = async function(id) {
@@ -2317,6 +2321,14 @@ const loadSearchResults = async function(query) {
     try {
         const data = await _helpers.getJSON(`${_config.API_URL}?search=${query}`);
         console.log(data);
+        data.data.recipes.map((rec)=>{
+            return {
+                id: rec.id,
+                title: rec.title,
+                publisher: rec.publisher,
+                image: rec.image_url
+            };
+        });
     } catch (err) {
         console.error(`${err} 😢`);
         throw err;

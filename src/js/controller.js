@@ -7,8 +7,6 @@ import 'regenerator-runtime/runtime';
 
 const controlRecipes = async function () {
   try {
-    const query = searchView.getQuery();
-    if (!query) return;
     const id = window.location.hash.slice(1);
 
     if (!id) return;
@@ -26,7 +24,9 @@ const controlRecipes = async function () {
 
 const controllSearchResults = async function () {
   try {
-    await model.loadSearchResults('pizza');
+    const query = searchView.getQuery();
+    if (!query) return;
+    await model.loadSearchResults(query);
     console.log(model.state.search.results);
   } catch (err) {
     console.log(err);

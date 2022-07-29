@@ -529,8 +529,6 @@ var _searchViewJsDefault = parcelHelpers.interopDefault(_searchViewJs);
 var _runtime = require("regenerator-runtime/runtime");
 const controlRecipes = async function() {
     try {
-        const query = _searchViewJsDefault.default.getQuery();
-        if (!query) return;
         const id = window.location.hash.slice(1);
         if (!id) return;
         _recipeViewJsDefault.default.renderSpinner();
@@ -544,7 +542,9 @@ const controlRecipes = async function() {
 };
 const controllSearchResults = async function() {
     try {
-        await _modelJs.loadSearchResults('pizza');
+        const query = _searchViewJsDefault.default.getQuery();
+        if (!query) return;
+        await _modelJs.loadSearchResults(query);
         console.log(_modelJs.state.search.results);
     } catch (err) {
         console.log(err);

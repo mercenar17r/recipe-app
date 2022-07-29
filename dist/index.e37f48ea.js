@@ -2844,6 +2844,12 @@ class SearchView {
     getQuery() {
         return this.#parentEl.querySelector('.search__field').value;
     }
+    addHandlerSearch(handler) {
+        this.#parentEl.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handler();
+        });
+    }
 }
 exports.default = new SearchView();
 

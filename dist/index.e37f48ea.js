@@ -2319,9 +2319,9 @@ const loadRecipe = async function(id) {
 };
 const loadSearchResults = async function(query) {
     try {
+        state.search.query = query;
         const data = await _helpers.getJSON(`${_config.API_URL}?search=${query}`);
-        console.log(data);
-        data.data.recipes.map((rec)=>{
+        state.search.results = data.data.recipes.map((rec)=>{
             return {
                 id: rec.id,
                 title: rec.title,
@@ -2329,6 +2329,7 @@ const loadSearchResults = async function(query) {
                 image: rec.image_url
             };
         });
+        console.log(state.search.results);
     } catch (err) {
         console.error(`${err} 😢`);
         throw err;

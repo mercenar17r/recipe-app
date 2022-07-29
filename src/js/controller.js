@@ -8,6 +8,7 @@ import 'regenerator-runtime/runtime';
 const controlRecipes = async function () {
   try {
     const query = searchView.getQuery();
+    if (!query) return;
     const id = window.location.hash.slice(1);
 
     if (!id) return;

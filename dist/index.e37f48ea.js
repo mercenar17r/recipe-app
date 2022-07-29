@@ -530,6 +530,7 @@ var _runtime = require("regenerator-runtime/runtime");
 const controlRecipes = async function() {
     try {
         const query = _searchViewJsDefault.default.getQuery();
+        if (!query) return;
         const id = window.location.hash.slice(1);
         if (!id) return;
         _recipeViewJsDefault.default.renderSpinner();

@@ -553,6 +553,7 @@ const controllSearchResults = async function() {
 controllSearchResults();
 const init = function() {
     _recipeViewJsDefault.default.addHandlerRender(controlRecipes);
+    _searchViewJsDefault.default.addHandlerSearch(controllSearchResults);
 };
 init();
 
@@ -2843,6 +2844,9 @@ class SearchView {
     #parentEl = document.querySelector('.search');
     getQuery() {
         return this.#parentEl.querySelector('.search__field').value;
+    }
+    clearInput() {
+        this.#parentEl.querySelector('.search__field').value = '';
     }
     addHandlerSearch(handler) {
         this.#parentEl.addEventListener('submit', function(e) {

@@ -552,7 +552,6 @@ const controlSearchResults = async function() {
         //2.Load search results
         await _modelJs.loadSearchResults(query);
         //3.Render results
-        console.log(_modelJs.state.search.results);
         _resultsViewJsDefault.default.render(_modelJs.state.search.results);
     } catch (err) {
         console.log(err);
@@ -2452,11 +2451,7 @@ class RecipeView extends _viewJsDefault.default {
       </div>
     </div>
 
-    <div class="recipe__user-generated">
-      <svg>
-        <use href="${_iconsSvgDefault.default}#icon-user"></use>
-      </svg>
-    </div>
+
     <button class="btn--round">
       <svg class="">
         <use href="${_iconsSvgDefault.default}#icon-bookmark-fill"></use>
@@ -2894,7 +2889,7 @@ class ResultsView extends _viewJsDefault.default {
     _generateMarkupPreview(result) {
         return `
         <li class="preview">
-        <a class="preview__link href="#${result.id}">
+        <a class="preview__link" href="#${result.id}">
           <figure class="preview__fig">
             <img src="${result.image}" alt="${result.title}" />
           </figure>

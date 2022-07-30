@@ -556,7 +556,7 @@ const controlSearchResults = async function() {
         //2.Load search results
         await _modelJs.loadSearchResults(query);
         //3.Render results
-        _resultsViewJsDefault.default.render(_modelJs.getSearchResultsPage());
+        _resultsViewJsDefault.default.render(_modelJs.getSearchResultsPage(1));
         //4.Render initial pagination buttons
         _paginationViewJsDefault.default.render(_modelJs.state.search);
     } catch (err) {
@@ -2941,10 +2941,14 @@ class PaginationView extends _viewJsDefault.default {
     _generateMarkup() {
         const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
         console.log(numPages);
-    //Page 1, and there are other pages
-    //Page 1, and there are NO other pages
-    //Last page
-    //Other page
+        //Page 1, and there are other pages
+        if (this._data.page === 1 && numPages > 1) return 'page 1,others';
+        //Last page
+        if (this._data.page === numPages && numPages > 1) return 'last page';
+        //Other page
+        if (this._data.page < numPages) return 'other page';
+        //Page 1, and there are NO other pages
+        return `only 1 page`;
     }
 }
 exports.default = new PaginationView();

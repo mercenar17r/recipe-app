@@ -556,7 +556,7 @@ const controlSearchResults = async function() {
         //2.Load search results
         await _modelJs.loadSearchResults(query);
         //3.Render results
-        _resultsViewJsDefault.default.render(_modelJs.getSearchResultsPage(1));
+        _resultsViewJsDefault.default.render(_modelJs.getSearchResultsPage(6));
         //4.Render initial pagination buttons
         _paginationViewJsDefault.default.render(_modelJs.state.search);
     } catch (err) {
@@ -2943,20 +2943,40 @@ class PaginationView extends _viewJsDefault.default {
         const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
         console.log(numPages);
         //Page 1, and there are other pages
-        if (curPage === 1 && numPages > 1) return 'page 1,others';
+        if (curPage === 1 && numPages > 1) return `
+        <button class="btn--inline pagination__btn--next">
+            <span>Page ${curPage + 1}</span>
+            <svg class="search__icon">
+                <use href="${_iconsSvgDefault.default}#icon-arrow-right"></use>
+            </svg>
+        </button>
+      `;
         //Last page
         if (curPage === numPages && numPages > 1) return `
         <button class="btn--inline pagination__btn--prev">
         <svg class="search__icon">
-            <use href="src/img/icons.svg#icon-arrow-left"></use>
+            <use href="${_iconsSvgDefault.default}#icon-arrow-left"></use>
         </svg>
         <span>Page ${curPage - 1}</span>
         </button>
         `;
         //Other page
-        if (curPage < numPages) return 'other page';
+        if (curPage < numPages) return `
+        <button class="btn--inline pagination__btn--prev">
+        <svg class="search__icon">
+            <use href="${_iconsSvgDefault.default}#icon-arrow-left"></use>
+        </svg>
+        <span>Page ${curPage - 1}</span>
+        </button>
+        <button class="btn--inline pagination__btn--next">
+            <span>Page ${curPage + 1}</span>
+            <svg class="search__icon">
+                <use href="${_iconsSvgDefault.default}#icon-arrow-right"></use>
+            </svg>
+        </button>
+        `;
         //Page 1, and there are NO other pages
-        return `only 1 page`;
+        return '';
     }
 }
 exports.default = new PaginationView();

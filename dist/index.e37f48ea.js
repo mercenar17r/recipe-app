@@ -552,6 +552,7 @@ const controlSearchResults = async function() {
         await _modelJs.loadSearchResults(query);
         //3.Render results
         console.log(_modelJs.state.search.results);
+        _resultsViewJsDefault.default.render(_modelJs.state.search.results);
     } catch (err) {
         console.log(err);
     }
@@ -2884,6 +2885,10 @@ var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
 class ResultsView extends _viewJsDefault.default {
     _parentElement = document.querySelector('.results');
     _generateMarkup() {
+        console.log(this._data);
+        return this._data.map(this._generateMarkupPreview).join(' ');
+    }
+    _generateMarkupPreview() {
         return `
         <li class="preview">
         <a class="preview__link preview__link--active" href="#23456">

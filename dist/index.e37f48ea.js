@@ -2451,7 +2451,9 @@ class RecipeView extends _viewJsDefault.default {
       </div>
     </div>
 
-
+    <div class="recipe__user-generated">
+ 
+    </div>
     <button class="btn--round">
       <svg class="">
         <use href="${_iconsSvgDefault.default}#icon-bookmark-fill"></use>
@@ -2882,6 +2884,8 @@ var _viewJs = require("./View.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
 class ResultsView extends _viewJsDefault.default {
     _parentElement = document.querySelector('.results');
+    _errorMessage = 'No recipes found for your query!Please try again';
+    _message = '';
     _generateMarkup() {
         console.log(this._data);
         return this._data.map(this._generateMarkupPreview).join(' ');

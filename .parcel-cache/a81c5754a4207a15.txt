@@ -1,4 +1,4 @@
-8170
+8171
 56C:\Users\Cosmin\Desktop\recipe-app\node_modules\mdn-data133029667803069933 1
 56C:\Users\Cosmin\Desktop\recipe-app\src\sass\_header.scss132886955210000000 0
 93C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\features\contenteditable.js133029667806970802 0
@@ -11,7 +11,7 @@
 56C:\Users\Cosmin\Desktop\recipe-app\node_modules\escalade133029667798248842 1
 85C:\Users\Cosmin\Desktop\recipe-app\node_modules\abortcontroller-polyfill\src\utils.js133029667799669170 0
 76C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\actual\math\clz32.js133029739062834152 0
-39C:\Users\Cosmin\Desktop\recipe-app\dist133035802944920704 1
+39C:\Users\Cosmin\Desktop\recipe-app\dist133036650482179763 1
 69C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\plugins\_path.js133029667797648712 0
 94C:\Users\Cosmin\Desktop\recipe-app\node_modules\postcss-normalize-timing-functions\LICENSE-MIT133029667794357965 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\regions\KN.js133029667815552737 0
@@ -43,7 +43,7 @@
 77C:\Users\Cosmin\Desktop\recipe-app\node_modules\msgpackr-extract\node_modules133029667822014192 1
 91C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\features\css-gradients.js133029667807861033 0
 74C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\plugins\mergePaths.js133029667803319987 0
-52C:\Users\Cosmin\Desktop\recipe-app\package-lock.json133035665520011415 0
+52C:\Users\Cosmin\Desktop\recipe-app\package-lock.json133036556482877818 0
 71C:\Users\Cosmin\Desktop\recipe-app\node_modules\parse-json\package.json133029667795618248 0
 55C:\Users\Cosmin\Desktop\recipe-app\node_modules\globals133029667798608923 1
 91C:\Users\Cosmin\Desktop\recipe-app\node_modules\csso\lib\restructure\4-restructShorthand.js133029667797228614 0
@@ -58,12 +58,12 @@
 70C:\Users\Cosmin\Desktop\recipe-app\node_modules\picomatch\CHANGELOG.md133029668455260720 0
 59C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-api133029667796548476 1
 86C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\internals\set-to-string-tag.js133029739112100466 0
-45C:\Users\Cosmin\Desktop\recipe-app\index.html133029890311071374 0
+45C:\Users\Cosmin\Desktop\recipe-app\index.html133036580484393153 0
 88C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\features\ogg-vorbis.js133029667817813245 0
 89C:\Users\Cosmin\Desktop\recipe-app\node_modules\postcss-calc\src\__tests__\convertUnit.js133029667796128366 0
 73C:\Users\Cosmin\Desktop\recipe-app\node_modules\yaml\browser\dist\util.js133029667804470249 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\postcss-normalize-positions\src133029667794938097 1
-47C:\Users\Cosmin\Desktop\recipe-app\node_modules133035665519591319 1
+47C:\Users\Cosmin\Desktop\recipe-app\node_modules133036556482437715 1
 84C:\Users\Cosmin\Desktop\recipe-app\node_modules\htmlparser2\lib\FeedHandler.d.ts.map133029667798498903 0
 99C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\object\get-own-property-descriptors.js133029739085763625 0
 87C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\proposals\symbol-description.js133029739116511460 0
@@ -86,9 +86,9 @@
 81C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\actual\instance\splice.js133029739114060911 0
 80C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\typed-array\from.js133029739084633374 0
 82C:\Users\Cosmin\Desktop\recipe-app\node_modules\htmlparser2\lib\Tokenizer.d.ts.map133029667799309080 0
-53C:\Users\Cosmin\Desktop\recipe-app\node_modules\@lmdb133035665519601330 1
+53C:\Users\Cosmin\Desktop\recipe-app\node_modules\@lmdb133036556482447712 1
 69C:\Users\Cosmin\Desktop\recipe-app\node_modules\csso\lib\clean\Raw.js133029667804170176 0
-50C:\Users\Cosmin\Desktop\recipe-app\src\js\model.js133035782645554732 0
+50C:\Users\Cosmin\Desktop\recipe-app\src\js\model.js133036652778204154 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\regions\PT.js133029667818523403 0
 42C:\Users\Cosmin\Desktop\recipe-app\src\img132886955210000000 1
 81C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\modules\es.global-this.js133029739070940936 0
@@ -110,7 +110,7 @@
 52C:\Users\Cosmin\Desktop\recipe-app\src\img\icons.svg132886955210000000 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\instance\flat.js133029739082842974 0
 56C:\Users\Cosmin\Desktop\recipe-app\node_modules\boolbase133029667795418207 1
-55C:\Users\Cosmin\Desktop\recipe-app\src\js\views\View.js133035801779320644 0
+55C:\Users\Cosmin\Desktop\recipe-app\src\js\views\View.js133036593359579990 0
 84C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\modules\esnext.math.umulh.js133029739076662231 0
 82C:\Users\Cosmin\Desktop\recipe-app\node_modules\type-fest\source\partial-deep.d.ts133029667802749859 0
 53C:\Users\Cosmin\Desktop\recipe-app\src\sass\main.scss132886955210000000 0
@@ -127,7 +127,7 @@
 73C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\packager-html\lib133029667795018116 1
 87C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\features\atob-btoa.js133029667804030147 0
 75C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\plugins\removeTitle.js133029667805150400 0
-55C:\Users\Cosmin\Desktop\recipe-app\src\js\controller.js133035803875821380 0
+55C:\Users\Cosmin\Desktop\recipe-app\src\js\controller.js133036647379896694 0
 71C:\Users\Cosmin\Desktop\recipe-app\node_modules\source-map\package.json133029667794267948 0
 84C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\string\replace-all.js133029739110750162 0
 92C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\features\string\virtual\ends-with.js133029739069265615 0
@@ -150,7 +150,7 @@
 81C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\typed-array\set.js133029739112280502 0
 92C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\internals\document-create-element.js133029739068015332 0
 76C:\Users\Cosmin\Desktop\recipe-app\node_modules\timsort\build\timsort.min.js133029667798108813 0
-61C:\Users\Cosmin\Desktop\recipe-app\src\js\views\recipeView.js133035793931723572 0
+61C:\Users\Cosmin\Desktop\recipe-app\src\js\views\recipeView.js133036583686382992 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\optimizer-image\LICENSE133029667794498000 0
 82C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\instance\pad-end.js133029739104638784 0
 90C:\Users\Cosmin\Desktop\recipe-app\node_modules\entities\lib\generated\decode-data-html.js133029667796828527 0
@@ -184,7 +184,7 @@
 80C:\Users\Cosmin\Desktop\recipe-app\node_modules\terser\lib\compress\inference.js133029667804690291 0
 75C:\Users\Cosmin\Desktop\recipe-app\node_modules\node-gyp-build\package.json133029667797408658 0
 54C:\Users\Cosmin\Desktop\recipe-app\src\img\favicon.png132886955210000000 0
-51C:\Users\Cosmin\Desktop\recipe-app\src\js\config.js133034704012200890 0
+51C:\Users\Cosmin\Desktop\recipe-app\src\js\config.js133036650480879654 0
 84C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\plugins\removeOffCanvasPaths.js133029667804960350 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\regions\LT.js133029667816032847 0
 61C:\Users\Cosmin\Desktop\recipe-app\node_modules\color-convert133029667797818746 1
@@ -214,15 +214,25 @@
 91C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\features\number\max-safe-integer.js133029739101868163 0
 65C:\Users\Cosmin\Desktop\recipe-app\node_modules\terser\bin\terser133029667797088582 0
 65C:\Users\Cosmin\Desktop\recipe-app\node_modules\mdn-data\index.js133029667796538464 0
-47C:\Users\Cosmin\Desktop\recipe-app\src\js\views133035786775500451 1
+47C:\Users\Cosmin\Desktop\recipe-app\src\js\views133036616126589831 1
 104C:\Users\Cosmin\Desktop\recipe-app\node_modules\htmlnano\docs\versioned_docs\version-2.0.0\030-config.md133029667805230412 0
 87C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\actual\symbol\async-iterator.js133029739060983752 0
 74C:\Users\Cosmin\Desktop\recipe-app\node_modules\node-releases\package.json133029667796128366 0
+77C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\actual\array\slice.js133029739112710609 0
+72C:\Users\Cosmin\Desktop\recipe-app\node_modules\msgpackr-extract\LICENSE133029667794327966 0
+80C:\Users\Cosmin\Desktop\recipe-app\node_modules\yaml\dist\PlainValue-ec8e588e.js133029667802829871 0
+81C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\data-view\index.js133029739093396260 0
+80C:\Users\Cosmin\Desktop\recipe-app\node_modules\entities\lib\decode_codepoint.js133029667795088131 0
+111C:\Users\Cosmin\Desktop\recipe-app\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\sample-mdb.txt133029667807550942 0
+95C:\Users\Cosmin\Desktop\recipe-app\node_modules\posthtml\node_modules\posthtml-parser\readme.md133029667797608699 0
+95C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\optimizer-terser\src\TerserOptimizer.js133029667796038343 0
+69C:\Users\Cosmin\Desktop\recipe-app\node_modules\domutils\lib\index.js133029667796538464 0
+65C:\Users\Cosmin\Desktop\recipe-app\src\js\views\paginationView.js133036644924056595 0
 64C:\Users\Cosmin\Desktop\recipe-app\node_modules\dotenv\README.md133029667797038573 0
 71C:\Users\Cosmin\Desktop\recipe-app\node_modules\utility-types\README.md133029667799779187 0
 69C:\Users\Cosmin\Desktop\recipe-app\node_modules\posthtml\lib\index.js133029667795848303 0
 101C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\features\stricttransportsecurity.js133029667819833705 0
-62C:\Users\Cosmin\Desktop\recipe-app\src\js\views\resultsView.js133035798760960788 0
+62C:\Users\Cosmin\Desktop\recipe-app\src\js\views\resultsView.js133036585050102831 0
 53C:\Users\Cosmin\Desktop\recipe-app\node_modules\chalk133029667797978782 1
 71C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\types\unsafe.js133029667796748506 0
 84C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\array\virtual\splice.js133029739114160926 0
@@ -275,7 +285,7 @@
 76C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\plugins\minifyStyles.js133029667803480027 0
 92C:\Users\Cosmin\Desktop\recipe-app\node_modules\css-select\lib\pseudo-selectors\pseudos.d.ts133029667803610048 0
 87C:\Users\Cosmin\Desktop\recipe-app\node_modules\postcss-minify-font-values\src\index.js133029667795208159 0
-66C:\Users\Cosmin\Desktop\recipe-app\node_modules\.package-lock.json133035665520121441 0
+66C:\Users\Cosmin\Desktop\recipe-app\node_modules\.package-lock.json133036556482997842 0
 90C:\Users\Cosmin\Desktop\recipe-app\node_modules\css-select\lib\pseudo-selectors\filters.js133029667797468669 0
 87C:\Users\Cosmin\Desktop\recipe-app\node_modules\terser\node_modules\commander\Readme.md133029667797198610 0
 67C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\date133029739120852435 1
@@ -312,7 +322,7 @@
 77C:\Users\Cosmin\Desktop\recipe-app\node_modules\terser\lib\compress\inline.js133029667804770311 0
 65C:\Users\Cosmin\Desktop\recipe-app\node_modules\readdirp\index.js133029668454910645 0
 95C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\modules\esnext.string.at-alternative.js133029739077282359 0
-65C:\Users\Cosmin\Desktop\recipe-app\node_modules\@msgpackr-extract133035665519601330 1
+65C:\Users\Cosmin\Desktop\recipe-app\node_modules\@msgpackr-extract133036556482437715 1
 76C:\Users\Cosmin\Desktop\recipe-app\node_modules\css-tree\dist\csstree.min.js133029667804080161 0
 95C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\features\chacha20-poly1305.js133029667806590720 0
 100C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\object\get-own-property-descriptor.js133029739085703624 0
@@ -962,7 +972,7 @@
 69C:\Users\Cosmin\Desktop\recipe-app\node_modules\terser\tools\exit.cjs133029667798108813 0
 73C:\Users\Cosmin\Desktop\recipe-app\node_modules\postcss\lib\document.d.ts133029667803760080 0
 95C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\internals\symbol-define-to-primitive.js133029739116491465 0
-58C:\Users\Cosmin\Desktop\recipe-app\dist\index.f7626f62.css133035770539630835 0
+58C:\Users\Cosmin\Desktop\recipe-app\dist\index.f7626f62.css133036629967938909 0
 64C:\Users\Cosmin\Desktop\recipe-app\node_modules\readdirp\LICENSE133029668454840624 0
 71C:\Users\Cosmin\Desktop\recipe-app\node_modules\weak-lru-cache\index.js133029667795988332 0
 90C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\es\typed-array\to-locale-string.js133029739117961781 0
@@ -1116,10 +1126,6 @@
 96C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\features\css-grid-animation.js133029667807871012 0
 75C:\Users\Cosmin\Desktop\recipe-app\node_modules\postcss-svgo\src\lib\url.js133029667795968332 0
 99C:\Users\Cosmin\Desktop\recipe-app\node_modules\stylehacks\src\plugins\htmlCombinatorCommentBody.js133029667797698724 0
-77C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\actual\array\slice.js133029739112710609 0
-72C:\Users\Cosmin\Desktop\recipe-app\node_modules\msgpackr-extract\LICENSE133029667794327966 0
-80C:\Users\Cosmin\Desktop\recipe-app\node_modules\yaml\dist\PlainValue-ec8e588e.js133029667802829871 0
-81C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\data-view\index.js133029739093396260 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\regions\LU.js133029667816042851 0
 83C:\Users\Cosmin\Desktop\recipe-app\node_modules\htmlnano\lib\modules\mergeStyles.js133029667800209287 0
 60C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full133029739126873789 1
@@ -1756,12 +1762,12 @@
 74C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\symbol\for.js133029739083583142 0
 80C:\Users\Cosmin\Desktop\recipe-app\node_modules\cssnano-preset-default\README.md133029667796578467 0
 65C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\lib\types.ts133029667806340663 0
+88C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\actual\object\define-property.js133029739067215145 0
+83C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\lib\svgo\css-select-adapter.js133029667802679839 0
 89C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\features\array\group-by-to-map.js133029739086281973 0
 76C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\array\values.js133029739125303431 0
 72C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\lib\svgo\plugins.js133029667803910120 0
 84C:\Users\Cosmin\Desktop\recipe-app\node_modules\css-what\lib\commonjs\index.d.ts.map133029667799519125 0
-88C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\actual\object\define-property.js133029739067215145 0
-83C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\lib\svgo\css-select-adapter.js133029667802679839 0
 99C:\Users\Cosmin\Desktop\recipe-app\node_modules\@jridgewell\resolve-uri\dist\types\resolve-uri.d.ts133029667798478895 0
 86C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\features\array\virtual\with.js133029739126713749 0
 72C:\Users\Cosmin\Desktop\recipe-app\node_modules\svgo\lib\svgo\jsAPI.d.ts133029667806310659 0
@@ -2249,9 +2255,6 @@
 71C:\Users\Cosmin\Desktop\recipe-app\node_modules\node-gyp-build\index.js133029667796288410 0
 93C:\Users\Cosmin\Desktop\recipe-app\node_modules\htmlnano\lib\modules\removeAttributeQuotes.js133029667802359768 0
 93C:\Users\Cosmin\Desktop\recipe-app\node_modules\posthtml\node_modules\posthtml-parser\license133029667794528005 0
-80C:\Users\Cosmin\Desktop\recipe-app\node_modules\entities\lib\decode_codepoint.js133029667795088131 0
-111C:\Users\Cosmin\Desktop\recipe-app\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\sample-mdb.txt133029667807550942 0
-95C:\Users\Cosmin\Desktop\recipe-app\node_modules\posthtml\node_modules\posthtml-parser\readme.md133029667797608699 0
 95C:\Users\Cosmin\Desktop\recipe-app\node_modules\@jridgewell\trace-mapping\dist\types\types.d.ts133029667802459794 0
 108C:\Users\Cosmin\Desktop\recipe-app\node_modules\posthtml\node_modules\posthtml-parser\dist\chunk.2UQLUWPH.js133029667795358190 0
 72C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\es\array\virtual133029739125183411 1
@@ -3194,7 +3197,7 @@
 81C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\es\symbol\has-instance.js133029739086962012 0
 84C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\features\set\is-subset-of.js133029739096436940 0
 110C:\Users\Cosmin\Desktop\recipe-app\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional.cmd133029667822514307 0
-58C:\Users\Cosmin\Desktop\recipe-app\dist\icons.dfd7a6db.svg133035770539490823 0
+58C:\Users\Cosmin\Desktop\recipe-app\dist\icons.dfd7a6db.svg133036629968048930 0
 61C:\Users\Cosmin\Desktop\recipe-app\node_modules\msgpackr\dist133029667799649160 1
 83C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\internals\proxy-accessor.js133029739106249142 0
 67C:\Users\Cosmin\Desktop\recipe-app\node_modules\msgpackr\index.d.ts133029667801849651 0
@@ -3220,10 +3223,10 @@
 70C:\Users\Cosmin\Desktop\recipe-app\node_modules\msgpackr\dist\index.js133029667797038573 0
 74C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\graph\lib\index.js133029667799989232 0
 78C:\Users\Cosmin\Desktop\recipe-app\node_modules\domutils\lib\querying.d.ts.map133029667800159288 0
-85C:\Users\Cosmin\Desktop\recipe-app\node_modules\csso\lib\restructure\prepare\index.js133029667803790091 0
 94C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\features\reflect\prevent-extensions.js133029739105739034 0
 80C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\features\regexp\match.js133029739101408059 0
 87C:\Users\Cosmin\Desktop\recipe-app\node_modules\cssnano-preset-default\types\index.d.ts133029667797268628 0
+85C:\Users\Cosmin\Desktop\recipe-app\node_modules\csso\lib\restructure\prepare\index.js133029667803790091 0
 74C:\Users\Cosmin\Desktop\recipe-app\node_modules\msgpackr\dist\index.min.js133029667798068811 0
 90C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\packager-js\src\ESMOutputFormat.js133029667798918993 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\actual\object\values.js133029739125153408 0
@@ -3789,8 +3792,6 @@
 75C:\Users\Cosmin\Desktop\recipe-app\node_modules\domutils\lib\feeds.d.ts.map133029667799259070 0
 69C:\Users\Cosmin\Desktop\recipe-app\node_modules\domutils\lib\feeds.js133029667795088131 0
 77C:\Users\Cosmin\Desktop\recipe-app\node_modules\domutils\lib\helpers.d.ts.map133029667799469124 0
-95C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\optimizer-terser\src\TerserOptimizer.js133029667796038343 0
-69C:\Users\Cosmin\Desktop\recipe-app\node_modules\domutils\lib\index.js133029667796538464 0
 80C:\Users\Cosmin\Desktop\recipe-app\node_modules\.bin\node-gyp-build-optional.cmd133029667822314256 0
 95C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\transformer-image\lib\validateConfig.js133029667797758734 0
 72C:\Users\Cosmin\Desktop\recipe-app\node_modules\domutils\lib\legacy.d.ts133029667802179734 0
@@ -4434,7 +4435,7 @@
 82C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\typed-array\some.js133029739113730829 0
 82C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\typed-array\sort.js133029739113960878 0
 82C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\string\virtual\sup.js133029739116431436 0
-58C:\Users\Cosmin\Desktop\recipe-app\dist\icons.21bad73c.svg133035770539420795 0
+58C:\Users\Cosmin\Desktop\recipe-app\dist\icons.21bad73c.svg133036629968048930 0
 94C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\typed-array\to-locale-string.js133029739118001794 0
 79C:\Users\Cosmin\Desktop\recipe-app\node_modules\caniuse-lite\data\regions\SN.js133029667819423602 0
 87C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\stable\typed-array\to-string.js133029739120912450 0
@@ -5638,7 +5639,7 @@
 75C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\math\fscale.js133029739084763410 0
 73C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\math\cbrt.js133029739062644112 0
 74C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\math\clz32.js133029739062874167 0
-50C:\Users\Cosmin\Desktop\recipe-app\dist\index.html133035770539930908 0
+50C:\Users\Cosmin\Desktop\recipe-app\dist\index.html133036629968058940 0
 75C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\transformer-svg\src133029667798458895 1
 80C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\math\deg-per-rad.js133029739067445193 0
 76C:\Users\Cosmin\Desktop\recipe-app\node_modules\core-js\full\math\degrees.js133029739067465206 0
@@ -7998,7 +7999,7 @@
 103C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\core\test\fixtures\invalid-engines\package.json133029667808081054 0
 105C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\core\test\fixtures\duplicate-targets\package.json133029667808051048 0
 110C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\core\test\fixtures\custom-targets-distdir\package.json133029667808031049 0
-57C:\Users\Cosmin\Desktop\recipe-app\dist\index.e37f48ea.js133035802944850681 0
+57C:\Users\Cosmin\Desktop\recipe-app\dist\index.e37f48ea.js133036650481969709 0
 102C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\core\test\fixtures\custom-targets\package.json133029667808041045 0
 87C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\core\lib\ParcelConfig.schema.js133029667806780762 0
 110C:\Users\Cosmin\Desktop\recipe-app\node_modules\@parcel\core\test\fixtures\custom-format-mismatch\package.json133029667808011037 0
@@ -8164,8 +8165,8 @@
 63C:\Users\Cosmin\Desktop\recipe-app\node_modules\.bin\semver.ps1133029667822334261 0
 59C:\Users\Cosmin\Desktop\recipe-app\node_modules\.bin\terser133029667822354268 0
 63C:\Users\Cosmin\Desktop\recipe-app\node_modules\.bin\terser.ps1133029667822344263 0
-60C:\Users\Cosmin\Desktop\recipe-app\dist\favicon.8b2f57bf.png133035770539660849 0
-61C:\Users\Cosmin\Desktop\recipe-app\dist\index.e37f48ea.js.map133035802944890699 0
-62C:\Users\Cosmin\Desktop\recipe-app\dist\index.f7626f62.css.map133035770539510824 0
-57C:\Users\Cosmin\Desktop\recipe-app\dist\logo.726d37a8.png133035770540270999 0
+60C:\Users\Cosmin\Desktop\recipe-app\dist\favicon.8b2f57bf.png133036629967948913 0
+61C:\Users\Cosmin\Desktop\recipe-app\dist\index.e37f48ea.js.map133036647381206897 0
+62C:\Users\Cosmin\Desktop\recipe-app\dist\index.f7626f62.css.map133036629967938909 0
+57C:\Users\Cosmin\Desktop\recipe-app\dist\logo.726d37a8.png133036629968318997 0
 62C:\Users\Cosmin\Desktop\recipe-app\dist\recipe-app.3464ddca.js133029702163948239 0

@@ -556,7 +556,7 @@ const controlSearchResults = async function() {
         //2.Load search results
         await _modelJs.loadSearchResults(query);
         //3.Render results
-        _resultsViewJsDefault.default.render(_modelJs.getSearchResultsPage(3));
+        _resultsViewJsDefault.default.render(_modelJs.getSearchResultsPage());
         //4.Render initial pagination buttons
         _paginationViewJsDefault.default.render(_modelJs.state.search);
     } catch (err) {
@@ -2375,7 +2375,7 @@ const loadSearchResults = async function(query) {
 const getSearchResultsPage = function(page = state.search.page) {
     state.search.page = page;
     const start = (page - 1) * state.search.resultsPerPage; //0;
-    const end = page * 10; //9;
+    const end = page * state.search.resultsPerPage; //9
     return state.search.results.slice(start, end);
 };
 
@@ -2390,7 +2390,7 @@ parcelHelpers.export(exports, "RES_PER_PAGE", ()=>RES_PER_PAGE
 );
 const API_URL = 'https://forkify-api.herokuapp.com/api/v2/recipes/';
 const TIMEOUT_SEC = 10;
-const RES_PER_PAGE = 10;
+const RES_PER_PAGE = 5;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hGI1E":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

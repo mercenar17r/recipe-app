@@ -579,6 +579,10 @@ const controlServings = function(newServings) {
     // recipeView.render(model.state.recipe);
     _recipeViewJsDefault.default.update(_modelJs.state.recipe);
 };
+const controlAddBookmark = function() {
+    _modelJs.addBookmark(_modelJs.state.recipe);
+    console.log(_modelJs.state.recipe);
+};
 const init = function() {
     _recipeViewJsDefault.default.addHandlerRender(controlRecipes);
     _recipeViewJsDefault.default.addHandlerUpdateServings(controlServings);
@@ -2477,6 +2481,13 @@ class RecipeView extends _viewJsDefault.default {
             if (+updateTo > 0) handler(+updateTo);
         });
     }
+    addHandlerAddBookmark(handler) {
+        this._parentElement.addEventListener('click', function(e) {
+            const btn = e.target.closest('.btn--bookmark');
+            if (!btn) return;
+            handler();
+        });
+    }
     _generateMarkup() {
         return `
     <figure class="recipe__fig">
@@ -2518,9 +2529,9 @@ class RecipeView extends _viewJsDefault.default {
     <div class="recipe__user-generated">
  
     </div>
-    <button class="btn--round">
+    <button class="btn--round btn--bookmark">
       <svg class="">
-        <use href="${_iconsSvgDefault.default}#icon-bookmark-fill"></use>
+        <use href="${_iconsSvgDefault.default}#icon-bookmark"></use>
       </svg>
     </button>
   </div>

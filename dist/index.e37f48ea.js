@@ -580,7 +580,8 @@ const controlServings = function(newServings) {
     _recipeViewJsDefault.default.update(_modelJs.state.recipe);
 };
 const controlAddBookmark = function() {
-    _modelJs.addBookmark(_modelJs.state.recipe);
+    if (!_modelJs.state.recipe.bookmarked) _modelJs.addBookmark(_modelJs.state.recipe);
+    else _modelJs.deleteBookmark(_modelJs.state.recipe.id);
     console.log(_modelJs.state.recipe);
     _recipeViewJsDefault.default.update(_modelJs.state.recipe);
 };
@@ -2339,6 +2340,8 @@ parcelHelpers.export(exports, "updateServings", ()=>updateServings
 );
 parcelHelpers.export(exports, "addBookmark", ()=>addBookmark
 );
+parcelHelpers.export(exports, "deleteBookmark", ()=>deleteBookmark
+);
 var _regeneratorRuntime = require("regenerator-runtime");
 var _config = require("./config");
 var _helpers = require("./helpers");
@@ -2415,6 +2418,14 @@ const addBookmark = function(recipe) {
     state.bookmarks.push(recipe);
     //Mark current recipe as bookmark
     if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+};
+const deleteBookmark = function(id) {
+    const index = state.bookmarks.findIndex((el)=>el.id === id
+    );
+    //Delete bookmark
+    state.bookmarks.splice(index, 1);
+    //Mark current recipe as  NOT bookmark
+    if (id === state.recipe.id) state.recipe.bookmarked = false;
 };
 
 },{"regenerator-runtime":"dXNgZ","./config":"k5Hzs","./helpers":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Hzs":[function(require,module,exports) {

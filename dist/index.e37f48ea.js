@@ -543,13 +543,15 @@ const controlRecipes = async function() {
         _recipeViewJsDefault.default.renderSpinner();
         //0.Update results view to mark selected search result
         _resultsViewJsDefault.default.update(_modelJs.getSearchResultsPage());
+        //1.Updating bookmark view
         _bookmarksViewJsDefault.default.update(_modelJs.state.bookmarks);
-        //1.Loading the recipe
+        //2.Loading the recipe
         await _modelJs.loadRecipe(id);
-        //2.Rendering the recipe
+        //3.Rendering the recipe
         _recipeViewJsDefault.default.render(_modelJs.state.recipe);
     } catch (err) {
         _recipeViewJsDefault.default.renderError();
+        console.error(err);
     }
 };
 const controlSearchResults = async function() {
@@ -588,10 +590,14 @@ const controlAddBookmark = function() {
     else _modelJs.deleteBookmark(_modelJs.state.recipe.id);
     //2.Update recipe view
     _recipeViewJsDefault.default.update(_modelJs.state.recipe);
-    //3.Rende the bookmarks
+    //3.Render the bookmarks
+    _bookmarksViewJsDefault.default.render(_modelJs.state.bookmarks);
+};
+const controlBookmarks = function() {
     _bookmarksViewJsDefault.default.render(_modelJs.state.bookmarks);
 };
 const init = function() {
+    _bookmarksViewJsDefault.default.addHandlerRender(controlBookmarks);
     _recipeViewJsDefault.default.addHandlerRender(controlRecipes);
     _recipeViewJsDefault.default.addHandlerUpdateServings(controlServings);
     _recipeViewJsDefault.default.addHandlerAddBookmark(controlAddBookmark);
@@ -3124,6 +3130,9 @@ class bookmarksView extends _viewJsDefault.default {
     _parentElement = document.querySelector('.bookmarks__list');
     _errorMessage = 'No bookmarks yet.Find a nice recipe and bookmark it ;) ';
     _message = '';
+    addHandlerRender(handler) {
+        window.addEventListener('load', handler);
+    }
     _generateMarkup() {
         return this._data.map((bookmark)=>_previewViewJsDefault.default.render(bookmark, false)
         ).join(' ');

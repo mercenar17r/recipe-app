@@ -2438,6 +2438,12 @@ const deleteBookmark = function(id) {
     if (id === state.recipe.id) state.recipe.bookmarked = false;
     persistBookmarks();
 };
+const init = function() {
+    const storage = localStorage.getItem('bookmarks');
+    if (storage) state.bookmarks = JSON.parse(storage);
+};
+init();
+console.log(state.bookmarks);
 
 },{"regenerator-runtime":"dXNgZ","./config":"k5Hzs","./helpers":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Hzs":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -3009,7 +3015,6 @@ class ResultsView extends _viewJsDefault.default {
     _errorMessage = 'No recipes found for your query!Please try again';
     _message = '';
     _generateMarkup() {
-        console.log(this._data);
         return this._data.map((result)=>_previewViewDefault.default.render(result, false)
         ).join(' ');
     }
@@ -3120,7 +3125,6 @@ class bookmarksView extends _viewJsDefault.default {
     _errorMessage = 'No bookmarks yet.Find a nice recipe and bookmark it ;) ';
     _message = '';
     _generateMarkup() {
-        console.log(this._data);
         return this._data.map((bookmark)=>_previewViewJsDefault.default.render(bookmark, false)
         ).join(' ');
     }

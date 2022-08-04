@@ -543,6 +543,7 @@ const controlRecipes = async function() {
         _recipeViewJsDefault.default.renderSpinner();
         //0.Update results view to mark selected search result
         _resultsViewJsDefault.default.update(_modelJs.getSearchResultsPage());
+        _bookmarksViewJsDefault.default.update(_modelJs.state.bookmarks);
         //1.Loading the recipe
         await _modelJs.loadRecipe(id);
         //2.Rendering the recipe

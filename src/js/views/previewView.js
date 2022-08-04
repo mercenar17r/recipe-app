@@ -2,9 +2,7 @@ import icons from 'url:../../img/icons.svg';
 import View from './View.js';
 
 class previevView extends View {
-  _parentElement = document.querySelector('.results');
-  _errorMessage = 'No recipes found for your query!Please try again';
-  _message = '';
+  _parentElement = '';
 
   _generateMarkup() {
     console.log(this._data);

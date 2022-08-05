@@ -1,6 +1,6 @@
 import { async } from 'regenerator-runtime';
 import { API_URL, RES_PER_PAGE } from './config';
-import { getJSON } from './helpers';
+import { getJSON, sendJSON } from './helpers';
 export const state = {
   recipe: {},
   search: {
@@ -133,7 +133,6 @@ export const uploadRecipe = async function (newRecipe) {
       servings: +newRecipe.servings,
       ingredients,
     };
-    console.log(recipe);
   } catch (err) {
     throw err;
   }

@@ -601,6 +601,8 @@ const controlBookmarks = function() {
 };
 const controlAddRecipe = async function(newRecipe) {
     try {
+        //Show loading spinner
+        _addRecipeViewJsDefault.default.renderSpinner();
         //Upload the new recipe data
         await _modelJs.uploadRecipe(newRecipe);
         console.log(_modelJs.state.recipe);
@@ -610,7 +612,7 @@ const controlAddRecipe = async function(newRecipe) {
         _addRecipeViewJsDefault.default.renderMessage();
         //Close form window
         setTimeout(function() {
-            _addRecipeViewJsDefault.default.toggleWindow();
+        // addRecipeView.toggleWindow();
         }, _configJs.MODAL_CLOSE_SEC * 1000);
     } catch (err) {
         console.error('💥', err);

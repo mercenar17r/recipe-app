@@ -616,7 +616,7 @@ const controlAddRecipe = async function(newRecipe) {
         window.history.pushState(null, '', `#${_modelJs.state.recipe.id}`);
         //Close form window
         setTimeout(function() {
-        // addRecipeView.toggleWindow();
+            _addRecipeViewJsDefault.default.toggleWindow();
         }, _configJs.MODAL_CLOSE_SEC * 1000);
     } catch (err) {
         console.error('💥', err);
@@ -2386,6 +2386,7 @@ parcelHelpers.export(exports, "uploadRecipe", ()=>uploadRecipe
 );
 var _regeneratorRuntime = require("regenerator-runtime");
 var _config = require("./config");
+// import { getJSON, sendJSON } from './helpers';
 var _helpers = require("./helpers");
 const state = {
     recipe: {
@@ -2416,7 +2417,7 @@ const createRecipeObject = function(data) {
 };
 const loadRecipe = async function(id) {
     try {
-        const data = await _helpers.getJSON(`${_config.API_URL}${id}`);
+        const data = await _helpers.AJAX(`${_config.API_URL}${id}`);
         state.recipe = createRecipeObject(data);
         if (state.bookmarks.some((bookmark)=>bookmark.id === id
         )) state.recipe.bookmarked = true;
@@ -2431,7 +2432,7 @@ const loadRecipe = async function(id) {
 const loadSearchResults = async function(query) {
     try {
         state.search.query = query;
-        const data = await _helpers.getJSON(`${_config.API_URL}?search=${query}`);
+        const data = await _helpers.AJAX(`${_config.API_URL}?search=${query}`);
         console.log(data);
         state.search.results = data.data.recipes.map((rec)=>{
             return {
@@ -2510,7 +2511,7 @@ const uploadRecipe = async function(newRecipe) {
             servings: +newRecipe.servings,
             ingredients
         };
-        const data = await _helpers.sendJSON(`${_config.API_URL}?key=${_config.KEY}`, recipe);
+        const data = await _helpers.AJAX(`${_config.API_URL}?key=${_config.KEY}`, recipe);
         state.recipe = createRecipeObject(data);
         addBookmark(state.recipe);
     } catch (err) {
@@ -2518,7 +2519,7 @@ const uploadRecipe = async function(newRecipe) {
     }
 };
 
-},{"regenerator-runtime":"dXNgZ","./config":"k5Hzs","./helpers":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Hzs":[function(require,module,exports) {
+},{"regenerator-runtime":"dXNgZ","./config":"k5Hzs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./helpers":"hGI1E"}],"k5Hzs":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL
@@ -2540,9 +2541,7 @@ const MODAL_CLOSE_SEC = 2.5;
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hGI1E":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getJSON", ()=>getJSON
-);
-parcelHelpers.export(exports, "sendJSON", ()=>sendJSON
+parcelHelpers.export(exports, "AJAX", ()=>AJAX
 );
 var _regeneratorRuntime = require("regenerator-runtime");
 var _config = require("./config");
@@ -2553,29 +2552,15 @@ const timeout = function(s) {
         }, s * 1000);
     });
 };
-const getJSON = async function(url) {
+const AJAX = async function(url, uploadData) {
     try {
-        const fetchPro = fetch(url);
-        const res = await Promise.race([
-            fetchPro,
-            timeout(_config.TIMEOUT_SEC)
-        ]);
-        const data = await res.json();
-        if (!res.ok) throw new Error(`${data.message} (${res.status})`);
-        return data;
-    } catch (err) {
-        throw err;
-    }
-};
-const sendJSON = async function(url, uploadData) {
-    try {
-        const fetchPro = fetch(url, {
+        const fetchPro = uploadData ? fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(uploadData)
-        });
+        }) : fetch(url);
         const res = await Promise.race([
             fetchPro,
             timeout(_config.TIMEOUT_SEC)
@@ -2586,7 +2571,41 @@ const sendJSON = async function(url, uploadData) {
     } catch (err) {
         throw err;
     }
+}; /*
+
+export const getJSON = async function (url) {
+  try {
+    const fetchPro = fetch(url);
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+
+    return data;
+  } catch (err) {
+    throw err;
+  }
 };
+
+export const sendJSON = async function (url, uploadData) {
+  try {
+    const fetchPro = fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(uploadData),
+    });
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+
+    return data;
+  } catch (err) {
+    throw err;
+  }
+};*/ 
 
 },{"regenerator-runtime":"dXNgZ","./config":"k5Hzs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l60JC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

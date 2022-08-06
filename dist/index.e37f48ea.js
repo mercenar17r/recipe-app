@@ -610,6 +610,10 @@ const controlAddRecipe = async function(newRecipe) {
         _recipeViewJsDefault.default.render(_modelJs.state.recipe);
         //Succes message
         _addRecipeViewJsDefault.default.renderMessage();
+        //Render bookmark view
+        _bookmarksViewJsDefault.default.render(_modelJs.state.bookmarks);
+        //Change ID in URL
+        window.history.pushState(null, '', `#${_modelJs.state.recipe.id}`);
         //Close form window
         setTimeout(function() {
         // addRecipeView.toggleWindow();
@@ -630,7 +634,7 @@ const init = function() {
 };
 init();
 
-},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./model.js":"Y4A21","./views/recipeView.js":"l60JC","./views/searchView.js":"9OQAM","./views/resultsView.js":"cSbZE","./views/paginationView.js":"6z7bi","./views/bookmarksView.js":"4Lqzq","./views/addRecipeView.js":"i6DNj","./config.js":"k5Hzs"}],"49tUX":[function(require,module,exports) {
+},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./model.js":"Y4A21","./views/recipeView.js":"l60JC","./views/searchView.js":"9OQAM","./views/resultsView.js":"cSbZE","./views/paginationView.js":"6z7bi","./views/bookmarksView.js":"4Lqzq","./config.js":"k5Hzs","./views/addRecipeView.js":"i6DNj"}],"49tUX":[function(require,module,exports) {
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require('../modules/web.clear-immediate');
 require('../modules/web.set-immediate');
